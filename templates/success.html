@@ -45,7 +45,7 @@
             {% for email in email_list: %}
                 <tr>
                     <td>{{ email['email'] }}</td>
-                    <td>{{ email["DATE_FORMAT(created_at,'%M %d %Y')"] }}</td>
+                    <td>{{ email['date'] }}</td>
                 </tr>
             {% endfor %}
         </tbody>        

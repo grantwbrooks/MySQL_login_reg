@@ -83,7 +83,7 @@ def register_user():
 
 @app.route('/success')
 def success():
-    query = "SELECT email, DATE_FORMAT(created_at,'%M %d %Y') FROM users"       # define your query, make sure you use the DATE_FORMAT stuff in your key 
+    query = "SELECT email, DATE_FORMAT(created_at,'%M %d %Y') as date FROM users"       # define your query, make sure you use the DATE_FORMAT stuff in your key 
     emails = mysql.query_db(query)
 
     id_query = "SELECT * FROM users WHERE id = :user_id"
